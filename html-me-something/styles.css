@@ -1,0 +1,33 @@
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    background-color:blue;
+}
+
+h4 {
+    text-align: center
+}
+
+img {
+    border:2px solid black;
+    height: 300px;
+    width: 300px;
+    border-radius: 100px;
+}
+
+.backdrop {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 1px
+}
+
+#bold {
+    text-transform: capitalize
+}

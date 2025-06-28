@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    <style>
+label{
+display: inline-block;
+
+clear: left;
+width: 115px;
+text-align: left;
+}
+input {
+  display: inline-block;
+}
+    ul {
+  list-style: none;
+    }
+    .right {
+        float:right
+    }
+    .error {
+    color:red;
+            }
+    </style>
+    </head>
+<body>
+    <a href="/">home</a>
+    <a href="/blog">all posts</a>
+    <a href="/newpost">new post</a>
+    <a class = "right" href="/logout">logout</a>
+    <a class="right" href="/login">login</a>
+    {% with messages = get_flashed_messages() %}
+        <ul>
+        {% for message in messages %}
+            <li>{{message}}</li>
+        {% endfor %}
+        </ul>
+    {% endwith %}
+    
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

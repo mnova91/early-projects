@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+
+    <!-- TODO #3 - Use the same list display from search.html -->
+
+    <p th:unless="${jobs} and ${jobs.size()}">No Results</p>
+
+    <table th:each="job : ${jobs}" class="job-listing">
+        <tr th:each="jobInformation : ${job}">
+            <td th:text="${#strings.capitalizeWords(jobInformation.key)}"></td>
+            <td th:text="${jobInformation.value}"></td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
