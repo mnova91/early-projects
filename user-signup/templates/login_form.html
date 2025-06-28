@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            form {
+                background-color: #eee;
+                padding: 20px;
+                margin: 0 auto;
+                width: 540px;
+                font: 16px sans-serif;
+                border-radius: 10px;
+            }
+            textarea {
+                margin: 10px 0;
+                width: 540px;
+                height: 120px;
+            }
+            .error {
+                color:red;
+            }
+        
+        </style>
+    </head>
+        <body>
+      
+            <form method="post" action="/login">
+
+                <label for='Username'>Username:</label>
+                    <input id ="Username" type="text" name="username" value={{ username }}>
+                    <span class="error">{{ username_error }}</span>
+                <br>
+
+                <label for='Password'>Password:</label>                   
+                    <input id="Password" type="password" name="password">
+                    <span class="error">{{ password_error }}</span>
+                    <br>
+
+                <label for='Verify_Password'>Verify Password:</label>                   
+                    <input id="Verify_Password" type="password" name="verify-password">
+                    <span class="error">{{ password_verification_error }}</span>
+                    <br>
+
+                <label for='Email'>Email (optional):</label>                    
+                    <input id="Email" type="text" name="email" value={{ email }}>
+                    <span class="error">{{ email_error }}</span>
+                    <br>
+
+                <input type="submit">
+            </form>
+
+    </body>
+</html>
